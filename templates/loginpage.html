@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% include 'cdnlines.html'%}
+</head>
+<style>
+    input[name]{
+        margin-top: -10px;
+    }
+    form{
+        margin-top: 100px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <form method="POST" class="border px-3 py-3 shadow">
+                    <h1 class="text-center bg-primary text-white pb-2">Login Here</h1>
+                    {% csrf_token %}
+                    <label>Enter Username:</label>
+                    <input type="text" name="username" class="form-control" placeholder="Username">
+                    <label>Enter Password:</label>
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                    <center class="mt-2">
+                        <input type="submit" value="Login" class="btn btn-success">
+                        <input type="reset" value="Clear" class="btn btn-danger"><br>
+                        <a href="{% url 'registrationpage' %}">New Account</a>
+                        {% include 'alerts.html' %}
+                    </center>
+
+                </form>
+                  
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}<title>Gallery Page</title>{% endblock %}
+</head>
+<body>
+    {% block content %}
+    <img src="{% static 'images/gallery1.jpg' %}"  style="width:100%;height:500px" class="img-thumbnail">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <img src="{% static 'images/nth1.jpg' %}" style="width:100%;height:100%" class="img-thumbnail">
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/nth2.jpg' %}" style="width:100%;height:100%" class="img-thumbnail">
+            
+            </div>
+            <div class="col-md-4">
+                <img src="{% static 'images/nth3.jpg' %}" style="width:100%;height:100%" class="img-thumbnail">
+                
+            </div>
+
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
